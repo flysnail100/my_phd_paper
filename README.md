@@ -1,11 +1,12 @@
 # NJU-Thesis
 
-　　本项目是在南京大学学位论文LaTeX模板的基础上撰写我的phd毕业论文。  
+　　本项目是在南京大学学位论文LaTeX模板的基础上进行了修改，并撰写我的毕业论文。  
 
 ## 使用说明:
-* 默认Windows系统下，**安装[ctex](http://www.ctex.org/CTeXDownload/)完整版**。Mac,Linux操作系统需按照sample.tex中的注释说明，修改字体等参数。已给出样例sample.tex，编辑修改该文件即可。
-* **必须使用XeLaTeX**。建议使用TeXworks编辑，选择**XeLaTeX+MakeIndex+BibTex**编译运行。WinEdt需要使用**UTF-8**编码打开.tex文件，并且使用XeLaTeX编译。
-* 切换本科生、研究生、博士生论文模版，需修改.tex文件中\documentclass[参数]
+* 安装环境为Windows系统，由于原先LaTeX版本已经是几年之前的了，且CTeX也已很久没有更新，所以本模版不再使用CTeX，而是安装**Tex Live 2020**，并安装**TeXstudio**作为编辑器，以上两款软件均可在网上free获取。
+* 由于旧的LaTeX模版老旧，使用**Tex Live 2020**编译存在bug，所以对原模版就行修改，主要修改了njuthesis.cls文件，已可进行正常编译。查找资料参考https://www.overleaf.com/blog/tex-live-2020-now-available和https://github.com/njuHan/njuthesis-nju-thesis-template/issues/8。
+* 因需对中文编译，所以必须配置使用**XeLaTeX**作为编译方式（一般英文编译，默认使用**pdfLaTeX**进行编译）。且在**编译前记得关闭所有pdf阅读器**，否则无法生成pdf文件。
+* 切换本科生、研究生、博士生论文模版，需修改.tex文件中\documentclass[参数]，如博士论文模版，对应参数中填写phd。
 * 参数twoside/oneside指定排版的文档为双面/单面格式，如果论文双面打印，则建议用twoside（twoside会使得chapter章节从奇数页开始，即纸张的正面开始，因此会出现一些空白的页面）。
 * 使用bibtex文献管理，用编辑器编辑sample.bib文件即可。或使用[JabRef](http://www.jabref.org/)打开
 

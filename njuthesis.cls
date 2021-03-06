@@ -80,7 +80,10 @@
 \punctstyle{plain}
 \RequirePackage{CJKfntef}
 \RequirePackage{ulem}
-\renewcommand*{\CJKunderlinecolor}{\color{black}}
+\RequirePackage{xeCJKfntef}
+\xeCJKsetup{underline/format=\color{black}}
+%\renewcommand*{\CJKunderlinecolor}{\color{black}}
+%\newcommand*{\CJKunderlinecolor}{\color{black}}
 \RequirePackage[hyphens]{url}
 \RequirePackage{hyperref}
 \hypersetup{%
@@ -893,6 +896,7 @@
   \begin{center}
     \vspace*{20pt}
     \bf\sffamily\zihao{2}\njut@value@en@title
+    %\bf\sffamily\zihao{2}\njut@value@englishtitle
     \vskip \stretch{1}
     \normalfont\rmfamily\zihao{4}\njut@cap@cover@en@by
     \vskip 3pt
@@ -913,8 +917,11 @@
   \end{center}
 }
 
+%\newcommand*{\abstracttitlea}[1]{%
+%  \renewcommand{\njut@value@abstract@titlea}{#1}%
+%}
 \newcommand*{\abstracttitlea}[1]{%
-  \renewcommand{\njut@value@abstract@titlea}{#1}%
+	\renewcommand{\njut@value@abstract@titlea}{#1}%
 }
 \newcommand*{\abstracttitleb}[1]{%
   \renewcommand{\njut@value@abstract@titleb}{#1}%
